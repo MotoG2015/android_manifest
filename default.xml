@@ -9,11 +9,15 @@
            remote="aosp"
            sync-c="true"
            sync-j="4" />
-           
+
   <remote  name="github"
            fetch="https://github.com/" />
 
-  <project path="build" name="platform/build" groups="pdk" >
+  <remote  name="moto"
+           revision="mm"
+           fetch="https://github.com/MotoG2015/" />
+
+  <project path="build" name="android_build" remote="moto" groups="pdk" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
